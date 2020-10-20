@@ -1,0 +1,118 @@
+header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: #fff;
+  background: linear-gradient(130deg, black, rgb(79,75,75) 100%);
+}
+
+header.masthead .header-content h1 {
+  font-size: 60px;
+}
+
+@media (min-width:992px) {
+  header.masthead .header-content h1 {
+    font-size: 100px;
+  }
+}
+
+#sec-main {
+  background: linear-gradient(130deg, black, rgb(79,75,75) 100%);
+}
+
+.thumbnail-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.thumbnail-list p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.thumbnail-list li:hover {
+  background: #cccccc;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.thumbnail-list li {
+  overflow: auto;
+  border-radius: 0.5em;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.thumbnail-list a, thumbnail-list a:hover {
+  color: initial;
+  text-decoration: initial;
+}
+
+.site-ref {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.site-ref h6 {
+  padding-left: 40px;
+  margin-bottom: 0px;
+}
+
+.site-ref img {
+  position: absolute;
+  top: 0px;
+  border-radius: 0.5em;
+}
+
+#get-the-facts-card {
+  background: #f2f2f2;
+}
+
+#nopic-heading {
+  font-size: 6rem;
+}
+
+#our-idea p {
+  max-width: 620px;
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
+
+#our-idea {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+@media (min-width:1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1400px;
+  }
+}
+
+.faq-list li {
+  display: flex;
+  align-items: center;
+}
+
+.faq-list h4 {
+  margin: 0;
+}
+
+#download-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#download-flex img {
+  width: 30%;
+  margin: 10px;
+}
+
+#content-row {
+  padding-top: 100px;
+}
+
