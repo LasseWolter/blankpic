@@ -108,8 +108,21 @@ header.masthead .header-content h1 {
 }
 
 #download-flex img {
-  width: 30%;
-  margin: 10px;
+  position: absolute;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#download-flex a {
+  min-width: 150px;
+  overflow: hidden;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative;
+  transition: transform 250ms;
 }
 
 #content-row {
@@ -118,5 +131,16 @@ header.masthead .header-content h1 {
 
 .card {
   margin: 1rem 0;
+}
+
+.content {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  margin: 10%;
+}
+
+#download-flex a:hover {
+  transform: scale(1.25);
 }
 
