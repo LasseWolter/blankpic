@@ -14,7 +14,7 @@ function getTotalTopOffset(el) {
 }
 
 // Lets you scroll to the part of the page where element with this id is located
-// Took some ideas from new-age.js
+// Took some ideas from new-age.js boostrap theme
 function scrollToId(idString) {
     const correction = -100; // height of the navbar in this case
     let element= document.querySelector('#' + idString);
@@ -27,7 +27,7 @@ function scrollToId(idString) {
 // Scroll behaviour of navbar - requirement for the following code to work
 //      - navlinks have an id of: "nav-" + sectionName 
 //      - sections themselve have an id of: "sec-" + sectionName
-sectionNames = ['facts', 'faq', 'download'];
+sectionNames = ['reasons', 'facts', 'faq', 'download'];
 for (let sec of sectionNames) {
     let element = document.getElementById('nav-' + sec);
     console.log(sec);

@@ -18,7 +18,7 @@ header.masthead .header-content h1 {
 }
 
 #sec-main {
-  background: linear-gradient(130deg, black, rgb(79,75,75) 100%);
+  background: linear-gradient(black 0%, rgb(79,75,75));
 }
 
 .thumbnail-list {
@@ -73,6 +73,7 @@ header.masthead .header-content h1 {
 
 #nopic-heading {
   font-size: 6rem;
+  margin-bottom: 1rem !important;
 }
 
 #our-idea p {
@@ -110,19 +111,34 @@ header.masthead .header-content h1 {
 #download-flex img {
   position: absolute;
   height: 70%;
+  max-height: 200px;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
 #download-flex a {
-  min-width: 150px;
+  min-width: 250px;
   overflow: hidden;
   width: 50%;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: max(50%, 250px);
   position: relative;
   transition: transform 250ms;
+}
+
+@media (min-width: 992px) {
+  #download-flex a {
+    width: 30%;
+    padding-bottom: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #download-flex a {
+    width: 25%;
+    padding-bottom: 30%;
+  }
 }
 
 #content-row {
@@ -142,5 +158,72 @@ header.masthead .header-content h1 {
 
 #download-flex a:hover {
   transform: scale(1.25);
+}
+
+#reasons-list {
+  padding-left: 20px;
+}
+
+#reasons-list li {
+  margin-top: 15px;
+}
+
+.sublist li {
+  margin-top: 0px !important;
+}
+
+#more-info-btn {
+  background-color: #6a6363;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  text-transform: lowercase;
+}
+
+#subheading {
+  color: #bcb6b6;
+  margin-bottom: 5rem;
+}
+
+#heading-div {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#more-info-btn:hover {
+  background-color: #9f9797;
+  transition: 1s;
+}
+
+span.avoidbreak {
+  display: inline-block;
+}
+
+#sec-start {
+  background: #000;
+  height: 100vh;
+}
+
+.card-title {
+  text-align: center;
+}
+
+#mainNav .nav-link {
+  cursor: pointer;
+}
+
+#mainNav .navbar-brand {
+  color: #fff;
+}
+
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #decfcf;
+}
+
+#mainNav.navbar-shrink a:hover {
+  color: #a49797 !important;
 }
 
