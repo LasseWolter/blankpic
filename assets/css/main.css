@@ -72,19 +72,22 @@ header.masthead .header-content h1 {
 }
 
 #nopic-heading {
-  font-size: 6rem;
+  font-size: 4rem;
   margin-bottom: 1rem !important;
 }
 
-#our-idea p {
+#sec-info p {
   max-width: 620px;
   text-align: center;
   margin: 1rem auto;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  color: white;
+  opacity: 0.9;
 }
 
-#our-idea {
-  padding-top: 80px;
+#sec-info {
+  background: black;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -143,10 +146,12 @@ header.masthead .header-content h1 {
 
 #content-row {
   padding-top: 100px;
+  padding: 0 0.5rem;
 }
 
 .card {
-  margin: 1rem 0;
+  margin: 2rem 0rem;
+  background: rgba(255,255,255,0.9);
 }
 
 .content {
@@ -172,17 +177,18 @@ header.masthead .header-content h1 {
   margin-top: 0px !important;
 }
 
-#more-info-btn {
+.nav-btn {
   background-color: #6a6363;
   border: none;
-  font-size: 1.25rem;
   padding: 0.5rem 1rem;
   text-transform: lowercase;
+  font-family: monospace;
 }
 
 #subheading {
   color: #bcb6b6;
   margin-bottom: 5rem;
+  font-size: 2rem;
 }
 
 #heading-div {
@@ -193,7 +199,7 @@ header.masthead .header-content h1 {
   align-items: center;
 }
 
-#more-info-btn:hover {
+.nav-btn {
   background-color: #9f9797;
   transition: 1s;
 }
@@ -225,5 +231,26 @@ span.avoidbreak {
 
 #mainNav.navbar-shrink a:hover {
   color: #a49797 !important;
+}
+
+.nav-box:hover {
+  cursor: pointer;
+  color: #fcbd20;
+  transition: 0.25s;
+}
+
+.nav-box {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  display: flex;
+  opacity: 0.9;
+  color: white;
+  align-items: center;
+}
+
+.nav-box h6 {
+  font-size: 18px;
+  font-family: monospace;
+  margin: 0;
 }
 

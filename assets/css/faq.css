@@ -12,9 +12,9 @@
 }
 
 .faq {
-  background-color: #e4e4e4;
-  color: #444;
-  border-radius: 0.5em;
+  background-color: #cbcbcb;
+  color: #414141;
+  border-radius: 0.5rem 0.5rem 0 0;
   cursor: pointer;
   padding: 18px;
   padding-right: 40px;
@@ -23,7 +23,7 @@
   text-align: left;
   outline: none;
   font-size: 1rem;
-  transition: 0.4s;
+  transition: 0.25s;
   position: relative;
 }
 
@@ -48,17 +48,19 @@
 }
 
 .faq:hover {
-  color: rgb(99,133,205);
-  background-color: #e4e4e4;
+  color: rgb(47,47,47);
+  background-color: #bcbcbc;
 }
 
 .answer {
   font-size: 1rem;
   padding: 0 18px;
   background-color: white;
+  color: #414141;
   max-height: 0;
   overflow: hidden;
   transition: padding 0.2s ease-out;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .answer-visible {
