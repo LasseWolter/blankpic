@@ -1,1 +1,1 @@
-# Repository of the Official #nopic Website
+# Repository of the Official #blankpic Website
