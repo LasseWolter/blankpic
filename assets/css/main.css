@@ -152,6 +152,7 @@ header.masthead .header-content h1 {
 .card {
   margin: 2rem 0rem;
   background: rgba(255,255,255,0.9);
+  border-radius: 1rem;
 }
 
 .content {
