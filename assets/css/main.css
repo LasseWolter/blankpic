@@ -180,14 +180,6 @@ header.masthead .header-content h1 {
   margin-top: 0px !important;
 }
 
-.nav-btn {
-  background-color: #6a6363;
-  border: none;
-  padding: 0.5rem 1rem;
-  text-transform: lowercase;
-  font-family: monospace;
-}
-
 #subheading {
   color: #bcb6b6;
   margin-bottom: 5rem;
@@ -202,7 +194,7 @@ header.masthead .header-content h1 {
   align-items: center;
 }
 
-.nav-btn {
+.nav-btn:hover, .nav-btn:focus, .nav-btn:active {
   background-color: #9f9797;
   transition: 1s;
 }
@@ -255,5 +247,13 @@ span.avoidbreak {
   font-size: 18px;
   font-family: monospace;
   margin: 0;
+}
+
+.nav-btn {
+  background-color: #6a6363;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: lowercase;
+  font-family: monospace;
 }
 

@@ -1,0 +1,156 @@
+@media (min-width: 992px) {
+  .clean-block .block-heading p {
+    text-align: center;
+    max-width: 620px;
+    margin: auto;
+    opacity: .7;
+  }
+}
+
+p, h1, h2, h3, h4, h5, h6, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+#copy-span {
+  cursor: pointer;
+  color: #fdcc52;
+}
+
+#copy-span:hover {
+  color: #fcbd20;
+  text-decoration: underline;
+}
+
+span.avoidbreak {
+  display: inline-block;
+}
+
+.submit-now {
+  margin-top: 20px;
+  font-size: 16px;
+  border-color: silver;
+}
+
+.form-control.input {
+  border: none;
+  background: transparent;
+  padding: .375rem .5rem;
+  margin: 0 0.25rem;
+  flex: 1;
+}
+
+.getintouch {
+  height: auto;
+  background: rgb(79,75,75);
+  color: white;
+  padding-top: 10px;
+}
+
+.form-group {
+  border-bottom: 1px solid silver;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.1rem;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .form-group {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.cust-textarea {
+  resize: both;
+  line-height: 20px;
+  min-height: 20px;
+  transition: all 1s ease-out;
+}
+
+@media (min-width: 992px) {
+  .cust-textarea:focus {
+    min-height: 200px !important;
+    transition: all 1s ease-out;
+  }
+}
+
+label {
+  padding: .375rem .1rem .375rem .75rem;
+  display: inline-block;
+  margin-bottom: 0;
+  flex: 0 1 auto;
+  align-self: start;
+}
+
+.block-heading {
+  padding-top: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media (min-width:576px) {
+  .block-heading {
+    padding-top: 80px;
+  }
+}
+
+/* The following definitions customise the kwes components */
+
+.kw-border-success, .kw-border-error {
+  border: none !important;
+}
+
+.kw-field-error-message {
+  position: absolute;
+  bottom: -22px;
+  left: 0.75rem;
+}
+
+.kw-alert-success {
+  background-color: rgb(171,231,235) !important;
+  color: rgb(25,120,126) !important;
+}
+
+.kw-alert-success {
+  position: fixed;
+  bottom: 0px;
+  width: 80% !important;
+  right: 10%;
+  left: 10%;
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+.btn-modern-form:hover, .btn-modern-form:focus, .btn-modern-form:active {
+  background-color: #9f9797;
+  color: white;
+  transition: 1s;
+}
+
+.btn-modern-form {
+  background-color: #6a6363;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: lowercase;
+  font-family: monospace;
+  border-radius: 2rem;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+}
+
+.form-control, .form-control:focus {
+  color: white;
+}
+
