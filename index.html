@@ -261,9 +261,9 @@
                 <div class="block-heading mt-5">
                     <h1>Get in touch</h1>
                     <h4>How can we help?</h4>
-                    <p>You have questions. Contact us via the contact form below or send an email directly to&nbsp;<span class="avoidbreak"><a id="email-link" href="mailto:your-email@example.com">info@blankpic.org</a></span>.&nbsp; We'll get back to you
-                        shortly.</p>
-                    <div class="modal fade" role="dialog" tabindex="-1" id="email-modal">
+                    <p>You have questions. Contact us via the contact form below or send an email directly to&nbsp;<span class="avoidbreak"><a id="email-link" href="mailto:info@blankpic.org">info@blankpic.org</a></span>.&nbsp; We'll get back to you shortly.</p>
+                    <div
+                        class="modal fade" role="dialog" tabindex="-1" id="email-modal">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-body d-flex flex-column" style="background: rgb(79,75,75);"><span class="spinner-border mx-auto" role="status"></span>
@@ -274,28 +274,28 @@
                                 <div class="modal-footer" style="background: rgb(79,75,75);"><button class="btn btn-modern-form" type="button" data-dismiss="modal">close</button></div>
                             </div>
                         </div>
+                </div>
+            </div>
+            <div>
+                <form id="contact-form" class="kwes-form" method="POST" action="https://kwes.io/api/foreign/forms/6JMA5a1NPVPawbE6JcJg" lang="en">
+                    <div class="form-row">
+                        <div class="col col-12 col-md-6 px-3">
+                            <div class="form-group"><label for="name">Name:</label><input class="form-control input" type="text" id="name-input" placeholder="Your Name" name="name" rules="required"></div>
+                        </div>
+                        <div class="col col-12 col-md-6 px-3">
+                            <div class="form-group"><label for="email">E-Mail:</label><input class="form-control input" type="email" id="email-input" name="email" placeholder="Your E-Mail-Address" rules="required"></div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <form id="contact-form" class="kwes-form" method="POST" action="<your-kwes-url>" lang="en">
-                        <div class="form-row">
-                            <div class="col col-12 col-md-6 px-3">
-                                <div class="form-group"><label for="name">Name:</label><input class="form-control input" type="text" id="name-input" placeholder="Your Name" name="name" rules="required"></div>
-                            </div>
-                            <div class="col col-12 col-md-6 px-3">
-                                <div class="form-group"><label for="email">E-Mail:</label><input class="form-control input" type="email" id="email-input" name="email" placeholder="Your E-Mail-Address" rules="required"></div>
-                            </div>
+                    <div class="form-row">
+                        <div class="col px-3 pt-2">
+                            <div class="form-group"><label for="message">Message:</label><textarea class="form-control input cust-textarea" id="msg-ta" placeholder="Your Message" name="message" rules="required" rows="1"></textarea></div>
                         </div>
-                        <div class="form-row">
-                            <div class="col px-3 pt-2">
-                                <div class="form-group"><label for="message">Message:</label><textarea class="form-control input cust-textarea" id="msg-ta" placeholder="Your Message" name="message" rules="required" rows="1"></textarea></div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col text-center pb-5"><button class="btn submit-now btn-modern-form" type="submit">submit</button></div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col text-center pb-5"><button class="btn submit-now btn-modern-form" type="submit">submit</button></div>
+                    </div>
+                </form>
+            </div>
             </div>
         </section>
         <!-- End: Modern-Kwes-Form -->
