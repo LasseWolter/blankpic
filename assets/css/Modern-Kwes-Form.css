@@ -99,7 +99,7 @@ label {
 
 @media (min-width:576px) {
   .block-heading {
-    padding-top: 80px;
+    padding-top: 20px;
   }
 }
 
@@ -140,7 +140,7 @@ label {
   background-color: #6a6363;
   border: none;
   padding: 0.5rem 1rem;
-  text-transform: lowercase;
+  text-transform: initial;
   font-family: monospace;
   border-radius: 2rem;
   color: white;

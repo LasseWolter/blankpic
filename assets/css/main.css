@@ -19,6 +19,7 @@ header.masthead .header-content h1 {
 
 #sec-main {
   background: linear-gradient(black 0%, rgb(79,75,75));
+  padding-bottom: 50px;
 }
 
 .thumbnail-list {
@@ -221,11 +222,11 @@ span.avoidbreak {
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #decfcf;
+  color: #7a6e6e;
 }
 
 #mainNav.navbar-shrink a:hover {
-  color: #a49797 !important;
+  color: #7a6e6e !important;
 }
 
 .nav-box:hover {
@@ -255,5 +256,108 @@ span.avoidbreak {
   padding: 0.5rem 1rem;
   text-transform: lowercase;
   font-family: monospace;
+}
+
+.darker-link {
+  color: black;
+  text-decoration: underline;
+}
+
+/* START Language picker in navbar */
+
+.dropdown {
+  display: inline-block;
+  font-size: 12px;
+  font-family: Lato,Helvetica,Arial,"sans-serif";
+  letter-spacing: 2px;
+}
+
+.dropdown-content {
+  display: none;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 0px;
+  border-left: solid 1px rgb(255,255,255);
+}
+
+.navbar-shrink .dropdown-content {
+  border-left-color: black;
+  background: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  position: relative;
+  left: -1px;
+  top: -12px;
+  color: rgb(255,255,255);
+  display: block;
+  line-height: 1.8;
+}
+
+.navbar-shrink .dropdown-content a {
+  color: black;
+}
+
+.dropdown-content a:hover {
+  display: block;
+  text-decoration: initial;
+}
+
+.dropdown .nav-link {
+  color: #fcbd20 !important;
+  font-size: 12px;
+  font-family: Lato,Helvetica,Arial,"sans-serif";
+  letter-spacing: 2px;
+}
+
+#lang-dropdown {
+  border-left: solid 1px white;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.navbar-shrink #lang-dropdown {
+  border-left: solid 1px black;
+  color: #000000 !important;
+}
+
+.navbar-shrink #navbar-lang-extension {
+  background: rgba(255,255,255,0.87);
+  height: 15px;
+}
+
+#navbar-lang-extension {
+  background: rgb(0,0,0);
+  height: 15px;
+}
+
+/* END Language picker */
+
+/* ---------------------------- */
+
+/* START Navbar customisation */
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+#mainNav .navbar-nav > li > a {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+}
+
+@media (min-width:992px) {
+  #mainNav.navbar-shrink {
+    border-color: rgba(34,34,34,.1);
+    background-color: rgba(255,255,255,0.87);
+  }
 }
 
