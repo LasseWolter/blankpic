@@ -33,3 +33,12 @@ for (let sec of sectionNames) {
     console.log(sec);
     element.onclick = scrollToId.bind(this, 'sec-' + sec);
 }
+
+
+// Updates background color according to navbar collapse
+// This is necessary bc langpick-div background has an alpha value not equal to 0
+// and thus, it looks weird if the div overlaps with the collapse navbar
+function toggle_langpick_color() {
+    let picker_div = document.querySelector('.lang-extension-mobile');
+    picker_div.classList.toggle('transparent-bg');
+}
