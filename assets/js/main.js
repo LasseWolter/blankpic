@@ -56,7 +56,7 @@ for (let link of lang_links) {
         // Get the current page minus the locale part at the beginning
         let newPath = window.location.pathname.replace(curLang,targetLang);
         // Redirect to sama page in different language
-        window.location.pathname=newPath;
+        window.location.href=newPath;
     }
 } 
 
