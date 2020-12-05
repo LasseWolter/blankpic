@@ -491,12 +491,23 @@ span.avoidbreak {
 
 /* END Navbar customisation */
 
-/* START Footer custimisation */
+/* START Footer customisation */
+
+footer {
+  padding: 10px 0;
+}
 
 .footer-flex {
   font-size: 12px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .footer-flex {
+    justify-content: space-between;
+  }
 }
 
 .footer-flex h6 {
@@ -520,6 +531,18 @@ span.avoidbreak {
 .footer-flex-item.useless-link:hover {
   color: hsla(0,0%,100%,.3) !important;
   text-decoration: initial;
+}
+
+@media (max-width: 767px) {
+  .footer-item-wide {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .blankpic-2020 {
+    border-bottom: solid 1px;
+  }
 }
 
 /* END Footer customisation */
