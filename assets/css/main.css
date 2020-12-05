@@ -318,10 +318,20 @@ span.avoidbreak {
   color: black;
 }
 
+.lang-dropdown:hover, .dropdown-content a:hover {
+  font-weight: bold !important;
+}
+
 @media (min-width: 992px) {
   .lang-dropdown {
     border-left: solid 1px white;
     color: #fff !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .lang-dropdown:hover, .dropdown-content a:hover {
+    color: #999999 !important;
   }
 }
 
@@ -332,15 +342,15 @@ span.avoidbreak {
   }
 }
 
+.navbar-shrink .lang-dropdown {
+  border-left: solid 1px black;
+  color: #000000 !important;
+}
+
 @media (max-width: 991px) {
   #langdrop-down-desktop {
     display: none;
   }
-}
-
-.navbar-shrink .lang-dropdown {
-  border-left: solid 1px black;
-  color: #000000 !important;
 }
 
 .navbar-lang-extension {
