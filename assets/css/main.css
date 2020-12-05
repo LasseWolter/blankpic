@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 100px;
+}
+
 header.masthead {
   position: relative;
   width: 100%;
@@ -289,6 +293,7 @@ span.avoidbreak {
   color: black;
   display: block;
   line-height: 1.8;
+  cursor: pointer;
 }
 
 .dropdown-content a:hover {
@@ -391,6 +396,12 @@ span.avoidbreak {
   background: transparent;
 }
 
+/* This class is added to the link which redirects page to switch the language */
+
+.langswitch {
+  cursor: pointer;
+}
+
 /* END Language picker */
 
 /* ---------------------------- */
@@ -479,4 +490,56 @@ span.avoidbreak {
 }
 
 /* END Navbar customisation */
+
+/* START Footer custimisation */
+
+.footer-flex {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-flex h6 {
+  color: hsla(0,0%,100%,.3);
+}
+
+.footer-flex-item {
+  margin: 0 10px;
+}
+
+.footer-flex a {
+  color: hsla(0,0%,100%,.3);
+}
+
+.footer-flex a:hover {
+  color: #fcbd20;
+}
+
+/* This is for the #blankpic 2020 which shouldn't be clicked but should have the same design as a link */
+
+.footer-flex-item.useless-link:hover {
+  color: hsla(0,0%,100%,.3) !important;
+  text-decoration: initial;
+}
+
+/* END Footer customisation */
+
+/* IMPRESSUM classes */
+
+.sec-impressum {
+  background: black;
+  min-height: 100vh;
+  color: white;
+}
+
+.div-impressum {
+  max-width: 700px;
+  margin: auto;
+}
+
+.div-impressum h3, .div-impressum p {
+  text-align: left;
+}
+
+/* END IMPRESSUM classes */
 

@@ -30,7 +30,6 @@ function scrollToId(idString) {
 sectionNames = ['reasons', 'facts', 'faq', 'download', 'contact'];
 for (let sec of sectionNames) {
     let element = document.getElementById('nav-' + sec);
-    console.log(sec);
     element.onclick = scrollToId.bind(this, 'sec-' + sec);
 }
 
@@ -38,7 +37,39 @@ for (let sec of sectionNames) {
 // Updates background color according to navbar collapse
 // This is necessary bc langpick-div background has an alpha value not equal to 0
 // and thus, it looks weird if the div overlaps with the collapse navbar
-function toggle_langpick_color() {
-    let picker_div = document.querySelector('.lang-extension-mobile');
-    picker_div.classList.toggle('transparent-bg');
+function toggleLangpickColor() {
+    let pickerDiv = document.querySelector('.lang-extension-mobile');
+    pickerDiv.classList.toggle('transparent-bg');
 }
+
+// Switch language while staying on current page and position
+// For this to work the link needs to have an attribute 'target_lang' with
+// the correct locale of the target language (e.g. 'de' or 'en')
+let lang_links = document.querySelectorAll('a.langswitch');
+for (let link of lang_links) {
+    link.onclick = function() {
+        // Save current yScrollingPosition
+        localStorage.setItem('scrollY', window.scrollY);
+        
+        let targetLang = link.getAttribute("target_lang").toLowerCase();
+        // Get the current page minus the locale part at the beginning
+        let currentPage= window.location.pathname.split('/').slice(2).join('/');
+        let newPage= `/${targetLang}/${currentPage}`;
+        // Redirect to sama page in different language
+        window.location.href=newPage;
+    }
+} 
+
+// Recover y-position on page after reload 
+window.addEventListener('load', () => {
+    // Don't try to recover position if the url contains an anchor
+    if (window.location.href.includes('#')) {
+        return;
+    }
+    let scrollY = localStorage.getItem('scrollY') || 0;
+    // Reset value to avoid auto-scrolling if it's not wanted
+    // e.g. when the user switches to the impressum page
+    localStorage.setItem('scrollY', 0);
+    window.scrollTo(0, scrollY);
+});
+
