@@ -154,3 +154,7 @@ label {
   color: white;
 }
 
+.kw-alert-warning {
+  background-color: black !important;
+}
+

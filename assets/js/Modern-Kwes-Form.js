@@ -6,15 +6,15 @@
 
 // Auto resize textarea to text
 let lastNumberOfRows = 0;
-const textarea = document.querySelector('.cust-textarea');
-// On each keyup we check if the rows got bigger than the current textarea
-textarea.addEventListener('keyup', () => {
-  // '+1' because one linebreak means 2 rows already
-  lastNumberOfRows = (textarea.value.match(/\n/g) || []).length + 1; 
-  if(lastNumberOfRows > textarea.rows) {
-    textarea.rows = lastNumberOfRows; 
-  }
-});
+//const textarea = document.querySelector('.cust-textarea');
+//// On each keyup we check if the rows got bigger than the current textarea
+//textarea.addEventListener('keyup', () => {
+//  // '+1' because one linebreak means 2 rows already
+//  lastNumberOfRows = (textarea.value.match(/\n/g) || []).length + 1; 
+//  if(lastNumberOfRows > textarea.rows) {
+//    textarea.rows = lastNumberOfRows; 
+//  }
+//});
 
 // Taken from https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser 
 function mobileAndTabletCheck() {
@@ -25,29 +25,29 @@ function mobileAndTabletCheck() {
 
 // Detecting if someone is using a mobile or a tablet to make form behave differently
 // This distinction is due to the following bug https://github.com/LasseWolter/solidbase_Website/issues/22 
-if (mobileAndTabletCheck()) {
-    textarea.onfocus = function() {
-        // Smooth scrolling instead of abrupt focus on textarea
-        scrollToElement(textarea);
-        textarea.rows = parseInt(Math.max(lastNumberOfRows, 5))
-    }
-    // Further we'd also like to apply to autoscrolling to name and email 
-    // for a better user expirience on mobile
-    const name_input = document.getElementById('name-input');
-    const email_input = document.getElementById('email-input');
-    name_input.onfocus = function () {
-        scrollToElement(name_input);
-    }
-    email_input.onfocus = function () {
-        scrollToElement(email_input);
-    }
-}
+// if (mobileAndTabletCheck()) {
+//     textarea.onfocus = function() {
+//         // Smooth scrolling instead of abrupt focus on textarea
+//         scrollToElement(textarea);
+//         textarea.rows = parseInt(Math.max(lastNumberOfRows, 5))
+//     }
+//     // Further we'd also like to apply to autoscrolling to name and email 
+//     // for a better user expirience on mobile
+//     const name_input = document.getElementById('name-input');
+//     const email_input = document.getElementById('email-input');
+//     name_input.onfocus = function () {
+//         scrollToElement(name_input);
+//     }
+//     email_input.onfocus = function () {
+//         scrollToElement(email_input);
+//     }
+// }
 
 // Smooth scroll to the element passed to the function minus navbar compensation
 function scrollToElement(el) {
     window.scrollTo({
         // -110 to compensate for the navbar
-        top: getTotalTopOffset(el) - 110,
+        top: getTotalTopOffset(el) - 56,
         behavior: 'smooth'
     });
 }
@@ -73,27 +73,27 @@ function getTotalTopOffset(el) {
 // This message would be "message muss ausgefüllt werden"
 //  -> where 'message' is a lowercase version of the id...
 // Bugreport was sent to kwes - so hopefully this can be changed in the future
-textarea.addEventListener('focusout', () => { 
-    errMsg = document.getElementById('field-error-message');
-    if(errMsg) {
-        errMsg.textContent = ""
-    }
-
-    setTimeout( function () {
-    errMsg = document.getElementById('field-error-message');
-    if(errMsg) {
-       errMsg.textContent = "Bitte geben Sie eine Nachricht ein.";
-    }
-    }, 500);
-
-    // In case the reaction of the kwes-js event handler was slow for some reason
-    setTimeout( function () {
-    errMsg = document.getElementById('field-error-message');
-    if(errMsg) {
-       errMsg.textContent = "Bitte geben Sie eine Nachricht ein.";
-    }
-    }, 1000);
-})
+//textarea.addEventListener('focusout', () => { 
+//    errMsg = document.getElementById('field-error-message');
+//    if(errMsg) {
+//        errMsg.textContent = ""
+//    }
+//
+//    setTimeout( function () {
+//    errMsg = document.getElementById('field-error-message');
+//    if(errMsg) {
+//       errMsg.textContent = "Bitte geben Sie eine Nachricht ein.";
+//    }
+//    }, 500);
+//
+//    // In case the reaction of the kwes-js event handler was slow for some reason
+//    setTimeout( function () {
+//    errMsg = document.getElementById('field-error-message');
+//    if(errMsg) {
+//       errMsg.textContent = "Bitte geben Sie eine Nachricht ein.";
+//    }
+//    }, 1000);
+//})
 
 // Info Modal is opened on click on email address and auto-closed after 30s
 document.getElementById('email-link').onclick = function () {
@@ -120,7 +120,7 @@ if (copySpan) {
 
 // Function executed whenever the pages is (re)loaded
 function init() {
-    $("#contact-form")[0].reset();
+    //$("#contact-form")[0].reset();
 }
 
 init() // Run init script on page (re)load
