@@ -43,8 +43,8 @@ function toggleLangpickColor() {
 }
 
 // Switch language while staying on current page and position
-// For this to work the link needs to have an attribute 'target_lang' with
-// the correct locale of the target language (e.g. 'de' or 'en')
+// For this to work the link needs to have the attributes 'target_lang' and 
+// 'current_lang' set to the correct locales(e.g. 'de' or 'en')
 let lang_links = document.querySelectorAll('a.langswitch');
 for (let link of lang_links) {
     link.onclick = function() {
@@ -52,11 +52,11 @@ for (let link of lang_links) {
         localStorage.setItem('scrollY', window.scrollY);
         
         let targetLang = link.getAttribute("target_lang").toLowerCase();
+        let curLang = link.getAttribute("current_lang").toLowerCase();
         // Get the current page minus the locale part at the beginning
-        let currentPage= window.location.pathname.split('/').slice(2).join('/');
-        let newPage= `/${targetLang}/${currentPage}`;
+        let newPath = window.location.pathname.replace(curLang,targetLang);
         // Redirect to sama page in different language
-        window.location.href=newPage;
+        window.location.pathname=newPath;
     }
 } 
 
