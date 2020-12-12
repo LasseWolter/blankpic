@@ -251,6 +251,7 @@ span.avoidbreak {
 .darker-link {
   color: black;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* START Language picker in navbar */
@@ -567,4 +568,58 @@ footer {
 }
 
 /* END IMPRESSUM classes */
+
+/* START Alternate-pic-gallery */
+
+/* This class is used to display the dialog/gallery when needed */
+
+.show {
+  display: block !important;
+}
+
+/* Popup shown if other pic gallery failed */
+
+#no-pic-dialog {
+  text-align: center;
+  background: #ffde8d;
+  border-radius: 0.5rem;
+  padding: 5px;
+  display: none;
+}
+
+#no-pic-dialog p {
+  margin: 0;
+}
+
+#alternate-pic-gallery {
+  text-align: center;
+  display: none;
+}
+
+/* Only to make link expand over the whole li */
+
+#alternate-pic-gallery .img-link:after {
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+#alternate-pic-gallery .img-link {
+  width: 100%;
+}
+
+#alternate-pic-gallery li {
+  display: block;
+  padding: 40px;
+  position: relative;
+}
+
+#alternate-pic-gallery img {
+  max-width: 80%;
+}
+
+/* END alternate pic gallery */
 

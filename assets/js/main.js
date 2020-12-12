@@ -73,3 +73,10 @@ window.addEventListener('load', () => {
     window.scrollTo(0, scrollY);
 });
 
+// Only show this dialog if other pic-gallery failed
+// (if the gallery-div is less than 200px high the display seems
+//  to have failed)
+// E.g. on mobile version of Edge, the other img-gallery fails (state: 12.12.2020)
+if ($('#download-flex').height() < 200) {
+    $('#no-pic-dialog').addClass('show');
+}
