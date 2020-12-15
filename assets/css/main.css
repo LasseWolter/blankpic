@@ -2,6 +2,26 @@ html {
   scroll-padding-top: 100px;
 }
 
+/* START Utils - classes of general utility */
+
+p, h1, h2, h3, h4, h5, h6, li, a, span {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+span.avoidbreak {
+  display: inline-block;
+}
+
+/* END Utils */
+
 header.masthead {
   position: relative;
   width: 100%;
@@ -204,10 +224,6 @@ header.masthead .header-content h1 {
 .nav-btn:hover, .nav-btn:focus, .nav-btn:active {
   background-color: #9f9797;
   transition: 1s;
-}
-
-span.avoidbreak {
-  display: inline-block;
 }
 
 #sec-start {
@@ -523,6 +539,7 @@ footer {
 
 .footer-flex a {
   color: hsla(0,0%,100%,.3);
+  display: inline-block;
 }
 
 .footer-flex a:hover {
@@ -622,4 +639,16 @@ footer {
 }
 
 /* END alternate pic gallery */
+
+p, h1, h2, h3, h4, h5, h6, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 
