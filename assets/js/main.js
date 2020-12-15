@@ -27,7 +27,7 @@ function scrollToId(idString) {
 // Scroll behaviour of navbar - requirement for the following code to work
 //      - navlinks have an id of: "nav-" + sectionName 
 //      - sections themselve have an id of: "sec-" + sectionName
-sectionNames = ['reasons', 'facts', 'faq', 'download', 'contact'];
+sectionNames = ['idea', 'reasons', 'facts', 'faq', 'download', 'contact'];
 for (let sec of sectionNames) {
     let element = document.getElementById('nav-' + sec);
     element.onclick = scrollToId.bind(this, 'sec-' + sec);
