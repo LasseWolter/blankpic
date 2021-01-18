@@ -6,7 +6,7 @@
 
 // Only execute this script on the index page which contains
 // the contact section
-if (window.location.pathname.includes('index')) {
+if (window.location.pathname.toLowerCase().includes('index')) {
     // Auto resize textarea to text
     let lastNumberOfRows = 0;
     //const textarea = document.querySelector('.cust-textarea');
